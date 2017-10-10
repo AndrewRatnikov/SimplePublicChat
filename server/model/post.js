@@ -7,11 +7,4 @@ const Post = sequilize.define('post', {
     text: Sequilize.STRING
 });
 
-Post.sync({ force: true }).then(() => {
-    return Post.create({
-        username: 'Andrew',
-        text: 'My first post'
-    });
-});
-
 module.exports = Post;
